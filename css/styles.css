@@ -13,6 +13,8 @@ body {
     font-size: 16px;
     font-family: 'Roboto Mono', monospace, sans-serif; /** Aplicamos estilo de fuente a todo el body **/
     background-color: #111927;
+    background-repeat: no-repeat;
+    color: #fff;
     background-image: 
         radial-gradient(at 47% 33%, hsl(162.00, 77%, 40%) 0, transparent 59%), 
         radial-gradient(at 82% 65%, hsl(218.00, 39%, 11%) 0, transparent 55%);
@@ -50,7 +52,6 @@ body {
 }
 
 .user-data {
-    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,7 +64,7 @@ body {
 }
 
 i {
-    font-size: 3rem;
+    font-size: 2rem;
     color: #fff;
 }
 
@@ -116,6 +117,7 @@ i {
 
 a {
     text-decoration: none;
+    color: #fff;
 }
 
 .portfolio {
@@ -130,4 +132,17 @@ a {
     display: none;   
 }
 
+.description {
+    margin: 2rem 3rem 3rem;
+}
 
+.link-project, .links {
+    margin-bottom: 2rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}

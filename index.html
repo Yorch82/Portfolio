@@ -11,14 +11,9 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
   <body>
     <main>
@@ -34,6 +29,8 @@
               <i class="devicon-javascript-plain"></i>
               <i class="devicon-python-plain"></i>
               <i class="devicon-bash-plain"></i>
+              <i class="devicon-html5-plain"></i>
+              <i class="devicon-css3-plain"></i>
               <i class="devicon-react-original"></i>
               <i class="devicon-nodejs-plain"></i>
               <i class="devicon-mongodb-plain-wordmark"></i>
@@ -48,23 +45,60 @@
           </div>
         </div>
         <div class="social-links">
-          <a href="https://www.linkedin.com/in/yorch82/" target="_blank"
-            ><i class="devicon-linkedin-plain"></i
-          ></a>
-          <a href="https://github.com/Yorch82" target="_blank"
-            ><i class="devicon-github-original"></i
-          ></a>
+          <a href="https://www.linkedin.com/in/yorch82/" target="_blank"><i class="devicon-linkedin-plain"></i></a>
+          <a href="https://github.com/Yorch82" target="_blank"><i class="devicon-github-original"></i></a>
+          <a href="mailto: jcampo1982@outlook.com"><i class='bx bx-envelope bx-lg' ></i></a>
         </div>
       </div>
       <div id="portfolio-container" class="hide">
-        <div  class="portfolio">
-          <div class="card">1</div>
-          <div class="card">2</div>
-          <div class="card">3</div>
-          <div class="card">4</div>
-          <div class="card">5</div>
+        <div  class="portfolio">          
+          <div class="card">
+            <h2>MemeStack (Frontend)</h2>
+            <img src="./img/logo.png" width="100px" height="100px">            
+            <p class="description">MemeStack is a meme-based social network for developers. Users will register, log in and publish using the social network API. This project has been developed with the REACT/REDUX framework.</p>
+            <div class="links">
+                <a href="https://memestack.vercel.app/" class="link-project" target="_blank"><i class='bx bx-link'></i></a>
+                <a href="https://github.com/Yorch82/SocialFrontend" class="link-project" target="_blank"><i class="devicon-github-original"></i></a>
+            </div>            
+          </div>
+          <div class="card">
+            <h2>MemeStack API (Backend)</h2>
+            <img src="./img/api.png" width="px" height="100px">            
+            <p class="description">API REST for social network where users can register, log in, post and like posts. This project has been developed with Node + Express technologies, in addition to MongoDB/Mongoose.</p>
+            <div class="links">
+                <a href="https://memestack-backend.adaptable.app/api-docs" class="link-project" target="_blank"><i class='bx bx-link'></i></a>
+                <a href="https://github.com/Yorch82/SocialBackend" class="link-project" target="_blank"><i class="devicon-github-original"></i></a>
+            </div>            
+          </div>
+          <div class="card">
+            <h2>Tech Shop (Frontend)</h2>
+            <img src="./img/shop.jpg" width="150px" height="100px">            
+            <p class="description">Tech Shop is an e-commerce where users will register, log in, view products and create orders using the e-commerce API. This project has been developed with the REACT/CONTEXT framework.</p>
+            <div class="links">
+                <a href="#" class="link-project" target="_blank"><i class='bx bx-link'></i></a>
+                <a href="https://github.com/Yorch82/frontend-ecommerce-2.0" class="link-project" target="_blank"><i class="devicon-github-original"></i></a>
+            </div>            
+          </div>
+          <div class="card">
+            <h2>Tech Shop API (Backend)</h2>
+            <img src="./img/api.png" width="px" height="100px">            
+            <p class="description">API REST for e-commerce where users can register, log in, post and like posts. This project has been developed with Node + Express technologies, in addition to MongoDB/Sequelize.</p>
+            <div class="links">
+                <a href="#" class="link-project" target="_blank"><i class='bx bx-link'></i></a>
+                <a href="https://github.com/Yorch82/BackendOnlineShop" class="link-project" target="_blank"><i class="devicon-github-original"></i></a>
+            </div>            
+          </div>
+          <div class="card">
+            <h2>Trivia Quiz</h2>
+            <img src="./img/trivia.jpg" width="200px" height="100px">
+            <p class="description">The project consists of developing a questionnaire, also known as Quiz, capable of showing the wrong and correct results. The Quiz consists of 10 questions with 4 options. Questions come from an API (https://opentdb.com/) and are presented in SPA (single-page application) format.</p>
+            <div class="links">
+                <a href="https://spa-trivial.netlify.app/" class="link-project" target="_blank"><i class='bx bx-link'></i></a>
+                <a href="https://github.com/Yorch82/Proyecto-SPA--Quizz-" class="link-project" target="_blank"><i class="devicon-github-original"></i></a>
+            </div>            
+          </div>            
         </div>
-        <div>
+        <div class="button-container">
           <button id="button-home" class="button">Home</button>
         </div>
       </div>
