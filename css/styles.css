@@ -1,0 +1,133 @@
+html {
+    font-size: 62.5%; /** Al aplicar estos valores al html y body podemos trabajar con los rem más fácilmente 1rem = 10px */
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Roboto Mono', monospace, sans-serif; /** Aplicamos estilo de fuente a todo el body **/
+    background-color: #111927;
+    background-image: 
+        radial-gradient(at 47% 33%, hsl(162.00, 77%, 40%) 0, transparent 59%), 
+        radial-gradient(at 82% 65%, hsl(218.00, 39%, 11%) 0, transparent 55%);
+    padding: 4.5rem;
+    margin: 0;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+}
+
+.card {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    height: auto;
+    width: 45rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.avatar {
+    border-radius: 15rem;
+    height: 100px; /* reducimos tamaño imagen */
+    margin-top: 2rem;
+    border-color: aqua;
+    border: 1px solid #fff;
+    padding: 10px;
+}
+
+.user-data {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.icons {
+    margin-top: 3rem;
+}
+
+i {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.button {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+    background: #57cc99;
+    z-index: 1;
+    margin-bottom: 2rem;
+}
+.button:hover:after {
+    width: 100%;
+    left: 0;
+}
+.button:after {
+    border-radius: 5px;
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+    transition: all 0.3s ease;
+    background-color: #80ed99;
+    right: 0;
+}
+.button:active {
+    top: 2px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.hide{
+    display: none;   
+}
+
+
