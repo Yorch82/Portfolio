@@ -20,6 +20,7 @@ body {
         radial-gradient(at 82% 65%, hsl(218.00, 39%, 11%) 0, transparent 55%);
     padding: 4.5rem;
     margin: 0;
+    user-select: none;
 }
 
 .container {
@@ -72,7 +73,7 @@ body {
 }
 
 i {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #fff;
 }
 
