@@ -1,0 +1,16 @@
+{
+    "projects":{
+        "first-project-title": "MemeStack (Frontend)",
+        "first-project-description": "MemeStack is a meme-based social network for developers. Users will register, log in and publish using the social network API. This project has been developed with the REACT/REDUX framework.",
+        "second-project-title": "MemeStack API (Backend)",
+        "second-project-description": "API REST for social network where users can register, log in, post and like posts. This project has been developed with Node + Express technologies, in addition to MongoDB/Mongoose.",
+        "third-project-title": "Tech Shop (Frontend)",
+        "third-project-description": "Tech Shop is an e-commerce where users will register, log in, view products and create orders using the e-commerce API. This project has been developed with the REACT/REDUX framework.",
+        "fourth-project-title": "Tech Shop (Backend)",
+        "fourth-project-description": "API REST for e-commerce where users can register, log in, view products, create orders and make the payment with Stripe. This project has been developed with Node + Express technologies, in addition to MongoDB/Sequelize.",
+        "fifth-project-title": "Trivia Quiz",
+        "fifth-project-description": "The project consists of developing a Quiz, capable of showing the wrong and correct results. The Quiz consists of 10 questions that come from an API and are presented in SPA (single-page application) format.",
+        "sixth-project-title": "Ethical Hacking Blog",
+        "sixth-project-description": "My personal blog where you can find Writeups from HackTheBox and VulnHub CTF machines, news and technical information of interest about the world of cybersecurity and pentesting."
+    }
+}

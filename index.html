@@ -17,6 +17,16 @@
   </head>
   <body>
     <main>
+      <header class="flags__img">
+        <div id="flags" class="flags">
+          <div class="flags__item" data-language="es">
+            <img src="./img/es.svg" alt="es">
+          </div>
+          <div class="flags__item" data-language="en">
+            <img src="./img/us.svg" alt="en">
+          </div>
+        </div>
+      </header>
       <div id="card-container" class="container">
         <div class="card">
           <div class="user-avatar rounded bordered">
@@ -59,7 +69,7 @@
           <div class="card">
             <h2>MemeStack (Frontend)</h2>
             <img src="./img/logo.png" width="100px" height="100px">            
-            <p class="description">MemeStack is a meme-based social network for developers. Users will register, log in and publish using the social network API. This project has been developed with the REACT/REDUX framework.</p>
+            <p class="description" data-section="projects" data-value="first-project-description">MemeStack is a meme-based social network for developers. Users will register, log in and publish using the social network API. This project has been developed with the REACT/REDUX framework.</p>
             <div class="links">
                 <a href="https://memestack.vercel.app/" class="link-project" target="_blank"><i class='bx bx-link'></i></a>
                 <a href="https://github.com/Yorch82/SocialFrontend" class="link-project" target="_blank"><i class="devicon-github-original"></i></a>
@@ -68,7 +78,7 @@
           <div class="card">
             <h2>MemeStack API (Backend)</h2>
             <img src="./img/api.png" width="px" height="100px">            
-            <p class="description">API REST for social network where users can register, log in, post and like posts. This project has been developed with Node + Express technologies, in addition to MongoDB/Mongoose.</p>
+            <p class="description" data-section="projects" data-value="second-project-description">API REST for social network where users can register, log in, post and like posts. This project has been developed with Node + Express technologies, in addition to MongoDB/Mongoose.</p>
             <div class="links">
                 <a href="https://memestack-backend.adaptable.app/api-docs" class="link-project" target="_blank"><i class='bx bx-link'></i></a>
                 <a href="https://github.com/Yorch82/SocialBackend" class="link-project" target="_blank"><i class="devicon-github-original"></i></a>
@@ -77,34 +87,34 @@
           <div class="card">
             <h2>Tech Shop (Frontend)</h2>
             <img src="./img/shop.jpg" width="150px" height="100px">            
-            <p class="description">Tech Shop is an e-commerce where users will register, log in, view products and create orders using the e-commerce API. This project has been developed with the REACT/CONTEXT framework.</p>
+            <p class="description" data-section="projects" data-value="third-project-description">Tech Shop is an e-commerce where users will register, log in, view products and create orders using the e-commerce API. This project has been developed with the REACT/REDUX framework.</p>
             <div class="links">
                 <a href="#" class="link-project" target="_blank"><i class='bx bx-link'></i></a>
-                <a href="https://github.com/Yorch82/frontend-ecommerce-2.0" class="link-project" target="_blank"><i class="devicon-github-original"></i></a>
+                <a href="https://github.com/Yorch82/ShopFrontend" class="link-project" target="_blank"><i class="devicon-github-original"></i></a>
             </div>            
           </div>
           <div class="card">
             <h2>Tech Shop API (Backend)</h2>
             <img src="./img/api.png" width="px" height="100px">            
-            <p class="description">API REST for e-commerce where users can register, log in, post and like posts. This project has been developed with Node + Express technologies, in addition to MongoDB/Sequelize.</p>
+            <p class="description" data-section="projects" data-value="fourth-project-description">API REST for e-commerce where users can register, log in, view products, create orders and make the payment with Stripe. This project has been developed with Node + Express technologies, in addition to MongoDB/Sequelize.</p>
             <div class="links">
                 <a href="#" class="link-project" target="_blank"><i class='bx bx-link'></i></a>
-                <a href="https://github.com/Yorch82/BackendOnlineShop" class="link-project" target="_blank"><i class="devicon-github-original"></i></a>
+                <a href="https://github.com/Yorch82/ShopBackend" class="link-project" target="_blank"><i class="devicon-github-original"></i></a>
             </div>            
           </div>
           <div class="card">
             <h2>Trivia Quiz</h2>
             <img src="./img/trivia.jpg" width="200px" height="100px">
-            <p class="description">The project consists of developing a Quiz, capable of showing the wrong and correct results. The Quiz consists of 10 questions that come from an API and are presented in SPA (single-page application) format.</p>
+            <p class="description" data-section="projects" data-value="fifth-project-description">The project consists of developing a Quiz, capable of showing the wrong and correct results. The Quiz consists of 10 questions that come from an API and are presented in SPA (single-page application) format.</p>
             <div class="links">
                 <a href="https://spa-trivial.netlify.app/" class="link-project" target="_blank"><i class='bx bx-link'></i></a>
                 <a href="https://github.com/Yorch82/Proyecto-SPA--Quizz-" class="link-project" target="_blank"><i class="devicon-github-original"></i></a>
             </div>            
           </div>
           <div class="card">
-            <h2>Cybersecurity Blog</h2>
+            <h2>Ethical Hacking Blog</h2>
             <img src="./img/cyber.jpg" width="200px" height="100px">
-            <p class="description">My personal blog where you can find Writeups from HackTheBox and VulnHub machines, news and technical information of interest about the world of cybersecurity and pentesting.<br><br></p>
+            <p class="description" data-section="projects" data-value="sixth-project-description">My personal blog where you can find Writeups from HackTheBox and VulnHub CTF machines, news and technical information of interest about the world of cybersecurity and pentesting.<br><br></p>
             <div class="links">
                 <a href="https://yorch82.github.io/" class="link-project" target="_blank"><i class='bx bx-link'></i></a>  
             </div>            
@@ -115,6 +125,6 @@
         </div>
       </div>
     </main>
-    <script src="./index.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
