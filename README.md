@@ -57,7 +57,7 @@ Portfolio/
 └── img/
     ├── preview.jpg         # Captura usada en este README
     ├── monitor-ia.png      # Icono del proyecto destacado
-    ├── yo.png              # Retrato
+    ├── yo.jpg              # Retrato
     ├── ejpt.png            # Insignia eJPT
     └── ecppt.png           # Insignia eCPPT
 ```

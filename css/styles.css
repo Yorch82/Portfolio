@@ -807,7 +807,7 @@ section[id] {
 .portrait__frame {
   position: relative;
   padding: 10px;
-  border: 1px solid var(--border-strong);
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, var(--border-strong));
   border-radius: 34px;
   background: linear-gradient(155deg, var(--surface-2), transparent 55%);
   box-shadow: var(--shadow);
@@ -819,16 +819,6 @@ section[id] {
   object-fit: cover;
   object-position: 50% 20%;
   border-radius: 26px;
-  background: #ffffff;
-}
-
-.portrait__frame::after {
-  content: "";
-  position: absolute;
-  inset: 10px;
-  border-radius: 26px;
-  background: linear-gradient(to top, rgba(4, 12, 9, 0.38), transparent 38%);
-  pointer-events: none;
 }
 
 .float-card {
