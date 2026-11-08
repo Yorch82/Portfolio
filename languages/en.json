@@ -1,16 +1,134 @@
 {
-    "projects":{
-        "first-project-title": "MemeStack (Frontend)",
-        "first-project-description": "MemeStack is a meme-based social network for developers. Users will register, log in and publish using the social network API. This project has been developed with the REACT/REDUX framework.",
-        "second-project-title": "MemeStack API (Backend)",
-        "second-project-description": "API REST for social network where users can register, log in, post and like posts. This project has been developed with Node + Express technologies, in addition to MongoDB/Mongoose.",
-        "third-project-title": "Tech Shop (Frontend)",
-        "third-project-description": "Tech Shop is an e-commerce where users will register, log in, view products and create orders using the e-commerce API. This project has been developed with the REACT/REDUX framework.",
-        "fourth-project-title": "Tech Shop (Backend)",
-        "fourth-project-description": "API REST for e-commerce where users can register, log in, view products, create orders and make the payment with Stripe. This project has been developed with Node + Express technologies, in addition to MongoDB/Sequelize.",
-        "fifth-project-title": "Trivia Quiz",
-        "fifth-project-description": "The project consists of developing a Quiz, capable of showing the wrong and correct results. The Quiz consists of 10 questions that come from an API and are presented in SPA (single-page application) format.",
-        "sixth-project-title": "Ethical Hacking Blog",
-        "sixth-project-description": "My personal blog where you can find Writeups from HackTheBox and VulnHub CTF machines, news and technical information of interest about the world of cybersecurity and pentesting."
-    }
+  "meta": {
+    "title": "Jorge Campo — Full Stack Developer & Pentester",
+    "description": "Jorge Campo's portfolio: full stack development, offensive security and local AI observability. Projects, eJPT/eCPPT certifications and Monitor IA."
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "lang": "Language",
+    "toggleTheme": "Toggle theme",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "nav": {
+    "aria": "Main navigation",
+    "about": "About",
+    "projects": "Projects",
+    "certs": "Certifications",
+    "contact": "Contact",
+    "cta": "Let's talk"
+  },
+  "hero": {
+    "available": "Available for new projects",
+    "title1": "Secure software.",
+    "title2": "Systems that feel alive.",
+    "greeting": "Hi, I'm Jorge Campo",
+    "role": "Full Stack Developer & Pentester",
+    "description": "I design and build web applications end to end, then look at them through an attacker's eyes. I also build observability tools for local AI, like Monitor IA.",
+    "ctaProjects": "View projects",
+    "ctaContact": "Let's talk",
+    "socialAria": "Profiles and contact",
+    "portraitAlt": "Portrait of Jorge Campo",
+    "monitorLink": "Building now Monitor IA — view project",
+    "scroll": "Scroll to explore",
+    "nowLabel": "Building now",
+    "certsLabel": "Certified"
+  },
+  "stats": {
+    "projects": "Personal projects",
+    "certs": "Offensive certifications",
+    "areas": "Areas of expertise"
+  },
+  "marquee": {
+    "aria": "Technologies"
+  },
+  "about": {
+    "eyebrow": "01 — About",
+    "title": "A hybrid profile: product, code and security.",
+    "lead": "I'm Jorge Campo, a full stack developer and pentester. I'm just as comfortable in React and Node as I am in a Linux shell, always balancing user experience, performance and attack surface.",
+    "body": "My approach is simple: understand the problem, design a maintainable solution, and test it as if I were the attacker. That lets me build products that don't just work — they hold up.",
+    "location": "Spain · Working remotely",
+    "focusTitle": "What I bring",
+    "focus1Title": "Full Stack",
+    "focus1Desc": "React interfaces, Node and FastAPI APIs, and data in MongoDB, MySQL or SQLite.",
+    "focus2Title": "Offensive security",
+    "focus2Desc": "Web pentesting, privilege escalation and Active Directory environments. eJPT and eCPPT.",
+    "focus3Title": "AI & observability",
+    "focus3Desc": "Real-time telemetry, GPU metrics, tokens and energy cost for local models.",
+    "stackTitle": "Everyday stack",
+    "stackDesc": "Tools I use to take an idea from the first commit to production."
+  },
+  "featured": {
+    "eyebrow": "02 — Featured project",
+    "heading": "Local AI, under control.",
+    "headingDesc": "A project born from a real need: understanding what happens inside my server while a model is generating.",
+    "badge": "AI · Observability",
+    "logoAlt": "Monitor IA logo",
+    "subtitle": "The dashboard that turns local inference into actionable data.",
+    "description": "Monitor IA is a real-time dashboard for models running on your own server. It tracks tokens, context usage, GPU/VRAM, temperature, power and energy cost, and adds server security and cooling. FastAPI backend with WebSocket, React frontend and a native SwiftUI app.",
+    "bullet1": "Live WebSocket streaming with SQLite history and CSV export.",
+    "bullet2": "OpenAI-compatible proxy that captures tokens, context and cost per request.",
+    "bullet3": "Server security: SSH, firewall, web scans and geolocation.",
+    "bullet4": "Cooling with fan profiles and an iOS app built with Swift Charts.",
+    "metric1": "Live refresh",
+    "metric2": "Automated tests",
+    "metric3": "GPU providers",
+    "metric4": "Native app",
+    "stackLabel": "Stack",
+    "viewCode": "View repository",
+    "readDocs": "Documentation",
+    "note": "Self-hosted project · No public demo"
+  },
+  "projects": {
+    "eyebrow": "03 — Projects",
+    "title": "Other things I've built.",
+    "description": "Full stack applications, APIs and security tools. Each one solves a different problem and shares the same obsession with detail.",
+    "filterAria": "Filter projects",
+    "filterAll": "All",
+    "filterWeb": "Web",
+    "filterBackend": "Backend",
+    "filterSecurity": "Security",
+    "memeTitle": "MemeStack",
+    "memeDesc": "A meme-based social network for developers: sign-up, login, posts and likes. React and Redux interfaces on top of a custom API.",
+    "live": "View demo",
+    "memeApiTitle": "MemeStack API",
+    "memeApiDesc": "REST API for the social network, documented with Swagger. Authentication, posts, comments and likes with Node, Express and MongoDB.",
+    "viewApi": "View API",
+    "shopTitle": "Tech Shop",
+    "shopDesc": "A complete e-commerce experience with catalogue, authentication, cart and orders. React/Redux frontend connected to a store API.",
+    "code": "Code",
+    "shopApiTitle": "Tech Shop API",
+    "shopApiDesc": "REST API for e-commerce with products, users, orders and Stripe payments. Node, Express and Sequelize.",
+    "triviaTitle": "Trivia Quiz",
+    "triviaDesc": "A 10-question SPA that consumes an external API, with instant right/wrong feedback. Vanilla JavaScript.",
+    "blogTitle": "Ethical Hacking Blog",
+    "blogDesc": "Personal blog with HackTheBox and VulnHub writeups, news and pentesting and cybersecurity techniques.",
+    "visit": "Visit blog"
+  },
+  "certs": {
+    "eyebrow": "04 — Certifications",
+    "title": "Validated learning, not just promises.",
+    "description": "Hands-on eLearnSecurity certifications that back up the offensive work.",
+    "ejptFull": "eLearnSecurity Junior Penetration Tester",
+    "ejptDesc": "Pentesting fundamentals: reconnaissance, web exploitation, escalation and basic pivoting.",
+    "ejptAlt": "eJPT badge",
+    "verify": "Verify certificate",
+    "ecpptFull": "eLearnSecurity Certified Professional Penetration Tester",
+    "ecpptDesc": "Professional pentesting: advanced exploitation, Active Directory, post-exploitation and reporting.",
+    "ecpptAlt": "eCPPT badge"
+  },
+  "contact": {
+    "eyebrow": "05 — Contact",
+    "title": "Shall we build something that holds up?",
+    "description": "I have room for new full stack projects, security audits and collaborations around local AI. Tell me what you have in mind.",
+    "primary": "Send an email",
+    "copy": "Copy email",
+    "copied": "Copied!",
+    "secondary": "View GitHub",
+    "follow": "Or find me on"
+  },
+  "footer": {
+    "tagline": "Designed and built with care.",
+    "top": "Back to top"
+  }
 }

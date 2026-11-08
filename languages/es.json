@@ -1,16 +1,134 @@
 {
-    "projects":{
-        "first-project-title": "MemeStack (Frontend)",
-        "first-project-description": "MemeStack es una red social basada en memes para desarrolladores. Los usuarios se registrarán, iniciarán sesión y publicarán utilizando la API de la red social. Este proyecto ha sido desarrollado con el framework REACT/REDUX.",
-        "second-project-title": "MemeStack API (Backend)",
-        "second-project-description": "API REST para red social donde los usuarios pueden registrarse, iniciar sesión, publicar y dar me gusta a las publicaciones. Este proyecto ha sido desarrollado con tecnologías Node + Express, además de MongoDB/Mongoose.",
-        "third-project-title": "Tech Shop (Frontend)",
-        "third-project-description": "Tech Shop es un comercio electrónico donde los usuarios se registrarán, iniciarán sesión, verán productos y crearán pedidos utilizando la API de comercio electrónico. Este proyecto ha sido desarrollado con el framework REACT/REDUX.",
-        "fourth-project-title": "Tech Shop (Backend)",
-        "fourth-project-description": "API REST para comercio electrónico donde los usuarios pueden registrarse, iniciar sesión, ver productos, crear pedidos y realizar el pago con Stripe. Este proyecto ha sido desarrollado con tecnologías Node + Express, además de MongoDB/Sequelize.",
-        "fifth-project-title": "Trivia Quiz",
-        "fifth-project-description": "El proyecto consiste en desarrollar un Quiz, capaz de mostrar resultados incorrectos y correctos. El Quiz consta de 10 preguntas que provienen de una API y se presentan en formato SPA (aplicación de una sola página).",
-        "sixth-project-title": "Ethical Hacking Blog",
-        "sixth-project-description": "Mi blog personal donde podrás encontrar Writeups de máquinas HackTheBox y VulnHub CTF, noticias e información técnica de interés sobre el mundo de la ciberseguridad y el pentesting."
-    }
+  "meta": {
+    "title": "Jorge Campo — Full Stack Developer & Pentester",
+    "description": "Portfolio de Jorge Campo: desarrollo Full Stack, seguridad ofensiva y observabilidad de IA local. Proyectos, certificaciones eJPT/eCPPT y Monitor IA."
+  },
+  "a11y": {
+    "skip": "Saltar al contenido",
+    "lang": "Idioma",
+    "toggleTheme": "Cambiar tema",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "nav": {
+    "aria": "Navegación principal",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "certs": "Certificaciones",
+    "contact": "Contacto",
+    "cta": "Hablemos"
+  },
+  "hero": {
+    "available": "Disponible para nuevos proyectos",
+    "title1": "Software seguro.",
+    "title2": "Sistemas que se sienten vivos.",
+    "greeting": "Hola, soy Jorge Campo",
+    "role": "Full Stack Developer & Pentester",
+    "description": "Diseño y construyo aplicaciones web de principio a fin, y luego las miro con ojos de atacante. Ahora también creo herramientas de observabilidad para IA local como Monitor IA.",
+    "ctaProjects": "Ver proyectos",
+    "ctaContact": "Hablemos",
+    "socialAria": "Perfiles y contacto",
+    "portraitAlt": "Retrato de Jorge Campo",
+    "monitorLink": "Construyendo ahora Monitor IA — ver proyecto",
+    "scroll": "Desliza para explorar",
+    "nowLabel": "Construyendo ahora",
+    "certsLabel": "Certificado"
+  },
+  "stats": {
+    "projects": "Proyectos personales",
+    "certs": "Certificaciones ofensivas",
+    "areas": "Áreas de especialidad"
+  },
+  "marquee": {
+    "aria": "Tecnologías"
+  },
+  "about": {
+    "eyebrow": "01 — Sobre mí",
+    "title": "Perfil híbrido: producto, código y seguridad.",
+    "lead": "Soy Jorge Campo, desarrollador Full Stack y pentester. Me muevo con la misma comodidad en React y Node que en una shell de Linux, buscando siempre el equilibrio entre experiencia de usuario, rendimiento y superficie de ataque.",
+    "body": "Mi enfoque es simple: entender el problema, diseñar una solución mantenible y probarla como si fuera un atacante. Eso me permite construir productos que no solo funcionan, sino que aguantan.",
+    "location": "España · Trabajo en remoto",
+    "focusTitle": "Qué aporto",
+    "focus1Title": "Full Stack",
+    "focus1Desc": "Interfaces con React, APIs con Node y FastAPI, y datos en MongoDB, MySQL o SQLite.",
+    "focus2Title": "Seguridad ofensiva",
+    "focus2Desc": "Pentesting web, escalada de privilegios y entornos Active Directory. eJPT y eCPPT.",
+    "focus3Title": "IA & observabilidad",
+    "focus3Desc": "Telemetría en tiempo real, métricas de GPU, tokens y coste energético para modelos locales.",
+    "stackTitle": "Stack habitual",
+    "stackDesc": "Herramientas que uso para llevar una idea desde el primer commit hasta producción."
+  },
+  "featured": {
+    "eyebrow": "02 — Proyecto destacado",
+    "heading": "IA local, bajo control.",
+    "headingDesc": "Un proyecto nacido de una necesidad real: entender qué ocurre dentro de mi servidor cuando un modelo está generando.",
+    "badge": "IA · Observabilidad",
+    "logoAlt": "Logotipo de Monitor IA",
+    "subtitle": "El panel que convierte la inferencia local en datos accionables.",
+    "description": "Monitor IA es un dashboard en tiempo real para modelos que corren en tu propio servidor. Mide tokens, ocupación de contexto, GPU/VRAM, temperatura, potencia y coste energético, y añade seguridad y refrigeración del servidor. Backend FastAPI con WebSocket, frontend React y app nativa SwiftUI.",
+    "bullet1": "Streaming en vivo por WebSocket con histórico en SQLite y exportación CSV.",
+    "bullet2": "Proxy OpenAI-compatible que captura tokens, contexto y coste por petición.",
+    "bullet3": "Seguridad del servidor: SSH, firewall, escaneos web y geolocalización.",
+    "bullet4": "Refrigeración con perfiles de ventilación y app iOS con Swift Charts.",
+    "metric1": "Refresco en vivo",
+    "metric2": "Tests automáticos",
+    "metric3": "Proveedores de GPU",
+    "metric4": "App nativa",
+    "stackLabel": "Stack",
+    "viewCode": "Ver repositorio",
+    "readDocs": "Documentación",
+    "note": "Proyecto self-hosted · Demo no pública"
+  },
+  "projects": {
+    "eyebrow": "03 — Proyectos",
+    "title": "Otros proyectos que he construido.",
+    "description": "Aplicaciones full stack, APIs y herramientas de seguridad. Cada una resuelve un problema distinto y comparte la misma obsesión por el detalle.",
+    "filterAria": "Filtrar proyectos",
+    "filterAll": "Todos",
+    "filterWeb": "Web",
+    "filterBackend": "Backend",
+    "filterSecurity": "Seguridad",
+    "memeTitle": "MemeStack",
+    "memeDesc": "Red social de memes para desarrolladores: registro, login, publicaciones y likes. Interfaces con React y Redux sobre una API propia.",
+    "live": "Ver demo",
+    "memeApiTitle": "MemeStack API",
+    "memeApiDesc": "API REST para la red social, documentada con Swagger. Autenticación, publicaciones, comentarios y me gusta con Node, Express y MongoDB.",
+    "viewApi": "Ver API",
+    "shopTitle": "Tech Shop",
+    "shopDesc": "E-commerce completo con catálogo, autenticación, carrito y pedidos. Frontend React/Redux conectado a una API de tienda.",
+    "code": "Código",
+    "shopApiTitle": "Tech Shop API",
+    "shopApiDesc": "API REST para e-commerce con productos, usuarios, pedidos y pago con Stripe. Node, Express y Sequelize.",
+    "triviaTitle": "Trivia Quiz",
+    "triviaDesc": "SPA de 10 preguntas que consume una API externa, con feedback inmediato de aciertos y errores. JavaScript puro.",
+    "blogTitle": "Ethical Hacking Blog",
+    "blogDesc": "Blog personal con writeups de HackTheBox y VulnHub, noticias y técnicas de pentesting y ciberseguridad.",
+    "visit": "Visitar blog"
+  },
+  "certs": {
+    "eyebrow": "04 — Certificaciones",
+    "title": "Aprendizaje validado, no solo prometido.",
+    "description": "Certificaciones prácticas de eLearnSecurity que respaldan el trabajo ofensivo.",
+    "ejptFull": "eLearnSecurity Junior Penetration Tester",
+    "ejptDesc": "Fundamentos de pentesting: reconocimiento, explotación web, escalada y pivotaje básico.",
+    "ejptAlt": "Insignia eJPT",
+    "verify": "Verificar certificado",
+    "ecpptFull": "eLearnSecurity Certified Professional Penetration Tester",
+    "ecpptDesc": "Pentesting profesional: explotación avanzada, Active Directory, post-explotación e informes.",
+    "ecpptAlt": "Insignia eCPPT"
+  },
+  "contact": {
+    "eyebrow": "05 — Contacto",
+    "title": "¿Construimos algo que aguante?",
+    "description": "Tengo espacio para nuevos proyectos full stack, auditorías de seguridad y colaboraciones alrededor de la IA local. Cuéntame qué tienes en mente.",
+    "primary": "Enviar un correo",
+    "copy": "Copiar email",
+    "copied": "¡Copiado!",
+    "secondary": "Ver GitHub",
+    "follow": "O encuéntrame en"
+  },
+  "footer": {
+    "tagline": "Diseñado y construido con cuidado.",
+    "top": "Volver arriba"
+  }
 }

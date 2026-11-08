@@ -1,130 +1,1045 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="preload" href="./css/normalize.css" as="style" />
-    <!--Precargamos Normalize para mejor performance -->
-    <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="preload" href="./css/styles.css" as="style" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Jorge Campo — Full Stack Developer &amp; Pentester</title>
+    <meta
+      name="description"
+      content="Portfolio de Jorge Campo: desarrollo Full Stack, seguridad ofensiva y observabilidad de IA local. Proyectos, certificaciones eJPT/eCPPT y Monitor IA."
+    />
+    <meta name="author" content="Jorge Campo" />
+    <meta name="theme-color" content="#07090c" id="theme-color" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Jorge Campo — Full Stack Developer & Pentester" />
+    <meta
+      property="og:description"
+      content="Software seguro, sistemas que se sienten vivos. Proyectos full stack, seguridad ofensiva y Monitor IA."
+    />
+    <meta property="og:image" content="./img/monitor-ia.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2307090c'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%236ef2c4' text-anchor='middle'%3EJC%3C/text%3E%3C/svg%3E"
+    />
+
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var theme =
+            stored ||
+            (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+          document.documentElement.dataset.theme = theme;
+        } catch (error) {
+          document.documentElement.dataset.theme = "dark";
+        }
+      })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"/>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
+
   <body>
-    <main>
-      <header class="flags__img">
-        <div id="flags" class="flags">
-          <div class="flags__item" data-language="es">
-            <img src="./img/es.svg" alt="es">
+    <a class="skip-link" href="#contenido" data-i18n="a11y.skip">Saltar al contenido</a>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="site-header" id="site-header">
+      <div class="container header__inner">
+        <a class="brand" href="#inicio">
+          <span class="brand__mark" aria-hidden="true">JC</span>
+          <span class="brand__text">Jorge Campo<span class="brand__dot">.</span></span>
+        </a>
+
+        <nav
+          class="nav"
+          id="primary-nav"
+          aria-label="Navegación principal"
+          data-i18n-aria="nav.aria"
+        >
+          <a class="nav__link" href="#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+          <a class="nav__link" href="#proyectos" data-i18n="nav.projects">Proyectos</a>
+          <a class="nav__link" href="#certificaciones" data-i18n="nav.certs">Certificaciones</a>
+          <a class="nav__link" href="#contacto" data-i18n="nav.contact">Contacto</a>
+        </nav>
+
+        <div class="header__actions">
+          <div class="lang-switch" role="group" aria-label="Idioma" data-i18n-aria="a11y.lang">
+            <button type="button" class="lang-switch__btn is-active" data-lang="es" aria-pressed="true">
+              ES
+            </button>
+            <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">
+              EN
+            </button>
           </div>
-          <div class="flags__item" data-language="en">
-            <img src="./img/us.svg" alt="en">
-          </div>
-        </div>
-      </header>
-      <div id="card-container" class="container">
-        <div class="card">
-          <div class="user-avatar rounded bordered">
-            <img src="./img/yo.png" alt="sheldon" class="avatar" />
-          </div>
-          <div class="user-data">
-            <h4 class="name">Jorge Campo</h4>
-            <span class="rol">FullStack Developer / Pentester</span>
-            <div class="icons">
-              <i class="devicon-javascript-plain"></i>
-              <i class="devicon-python-plain"></i>
-              <i class="devicon-bash-plain"></i>
-              <i class="devicon-html5-plain"></i>
-              <i class="devicon-css3-plain"></i>
-              <i class="devicon-react-original"></i>
-              <i class="devicon-nodejs-plain"></i>
-              <i class="devicon-mongodb-plain-wordmark"></i>
-              <i class="devicon-mysql-plain-wordmark"></i>
-              <i class="devicon-express-original"></i>
-              <i class="devicon-git-plain"></i>
-              <i class="devicon-debian-plain"></i>
-            </div>
-            <div class="certs">
-              <a href="https://verified.elearnsecurity.com/certificates/828833e2-7d29-427c-9b3a-07172b430cd2" target="_blank"><img src="./img/ejpt.png" width="55px" height="40px" alt="ejpt"></a>
-              <a href="https://verified.elearnsecurity.com/certificates/12832473-1e61-4505-bf66-ad5a59696629" target="_blank"><img src="./img/ecppt.png" width="55px" height="40px" alt="ecppt"></a>
-            </div>
-          </div>
-          <div>
-            <button id="button" class="button">Portfolio</button>
-          </div>
-        </div>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/yorch82/" target="_blank"><i class="devicon-linkedin-plain"></i></a>
-          <a href="https://github.com/Yorch82" target="_blank"><i class="devicon-github-original"></i></a>
-          <a href="mailto: jcampo1982@outlook.com"><i class='bx bx-envelope bx-lg' ></i></a>
-        </div>
-      </div>
-      <div id="portfolio-container" class="hide">
-        <div  class="portfolio">          
-          <div class="card">
-            <h2>MemeStack (Frontend)</h2>
-            <img src="./img/logo.png" width="100px" height="100px">            
-            <p class="description" data-section="projects" data-value="first-project-description">MemeStack is a meme-based social network for developers. Users will register, log in and publish using the social network API. This project has been developed with the REACT/REDUX framework.</p>
-            <div class="links">
-                <a href="https://memestack.vercel.app/" class="link-project" target="_blank"><i class='bx bx-link'></i></a>
-                <a href="https://github.com/Yorch82/SocialFrontend" class="link-project" target="_blank"><i class="devicon-github-original"></i></a>
-            </div>            
-          </div>
-          <div class="card">
-            <h2>MemeStack API (Backend)</h2>
-            <img src="./img/api.png" width="px" height="100px">            
-            <p class="description" data-section="projects" data-value="second-project-description">API REST for social network where users can register, log in, post and like posts. This project has been developed with Node + Express technologies, in addition to MongoDB/Mongoose.</p>
-            <div class="links">
-                <a href="https://memestack-backend.adaptable.app/api-docs" class="link-project" target="_blank"><i class='bx bx-link'></i></a>
-                <a href="https://github.com/Yorch82/SocialBackend" class="link-project" target="_blank"><i class="devicon-github-original"></i></a>
-            </div>            
-          </div>
-          <div class="card">
-            <h2>Tech Shop (Frontend)</h2>
-            <img src="./img/shop.jpg" width="150px" height="100px">            
-            <p class="description" data-section="projects" data-value="third-project-description">Tech Shop is an e-commerce where users will register, log in, view products and create orders using the e-commerce API. This project has been developed with the REACT/REDUX framework.</p>
-            <div class="links">
-                <a href="#" class="link-project" target="_blank"><i class='bx bx-link'></i></a>
-                <a href="https://github.com/Yorch82/ShopFrontend" class="link-project" target="_blank"><i class="devicon-github-original"></i></a>
-            </div>            
-          </div>
-          <div class="card">
-            <h2>Tech Shop API (Backend)</h2>
-            <img src="./img/api.png" width="px" height="100px">            
-            <p class="description" data-section="projects" data-value="fourth-project-description">API REST for e-commerce where users can register, log in, view products, create orders and make the payment with Stripe. This project has been developed with Node + Express technologies, in addition to MongoDB/Sequelize.</p>
-            <div class="links">
-                <a href="https://shopbackend-dev-rkxj.1.ie-1.fl0.io/api-docs" class="link-project" target="_blank"><i class='bx bx-link'></i></a>
-                <a href="https://github.com/Yorch82/ShopBackend" class="link-project" target="_blank"><i class="devicon-github-original"></i></a>
-            </div>            
-          </div>
-          <div class="card">
-            <h2>Trivia Quiz</h2>
-            <img src="./img/trivia.jpg" width="200px" height="100px">
-            <p class="description" data-section="projects" data-value="fifth-project-description">The project consists of developing a Quiz, capable of showing the wrong and correct results. The Quiz consists of 10 questions that come from an API and are presented in SPA (single-page application) format.</p>
-            <div class="links">
-                <a href="https://spa-trivial.netlify.app/" class="link-project" target="_blank"><i class='bx bx-link'></i></a>
-                <a href="https://github.com/Yorch82/Proyecto-SPA--Quizz-" class="link-project" target="_blank"><i class="devicon-github-original"></i></a>
-            </div>            
-          </div>
-          <div class="card">
-            <h2>Ethical Hacking Blog</h2>
-            <img src="./img/cyber.jpg" width="200px" height="100px">
-            <p class="description" data-section="projects" data-value="sixth-project-description">My personal blog where you can find Writeups from HackTheBox and VulnHub CTF machines, news and technical information of interest about the world of cybersecurity and pentesting.<br><br></p>
-            <div class="links">
-                <a href="https://yorch82.github.io/" class="link-project" target="_blank"><i class='bx bx-link'></i></a>  
-            </div>            
-          </div>             
-        </div>
-        <div class="button-container">
-          <button id="button-home" class="button">Home</button>
+
+          <button
+            type="button"
+            class="icon-btn theme-toggle"
+            id="theme-toggle"
+            aria-label="Cambiar tema"
+            data-i18n-aria="a11y.toggleTheme"
+          >
+            <i class="bx bx-sun theme-icon theme-icon--sun" aria-hidden="true"></i>
+            <i class="bx bx-moon theme-icon theme-icon--moon" aria-hidden="true"></i>
+          </button>
+
+          <a class="btn btn--primary btn--sm header__cta" href="#contacto">
+            <span data-i18n="nav.cta">Hablemos</span>
+            <i class="bx bx-arrow-up-right" aria-hidden="true"></i>
+          </a>
+
+          <button
+            type="button"
+            class="icon-btn menu-toggle"
+            id="menu-toggle"
+            aria-expanded="false"
+            aria-controls="primary-nav"
+            aria-label="Abrir menú"
+          >
+            <i class="bx bx-menu menu-toggle__open" aria-hidden="true"></i>
+            <i class="bx bx-x menu-toggle__close" aria-hidden="true"></i>
+          </button>
         </div>
       </div>
+    </header>
+
+    <main id="contenido">
+      <!-- Hero -->
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="container hero__grid">
+          <div class="hero__content reveal">
+            <p class="eyebrow">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span data-i18n="hero.available">Disponible para nuevos proyectos</span>
+            </p>
+
+            <h1 class="hero__title" id="hero-title">
+              <span class="hero__title-line" data-i18n="hero.title1">Software seguro.</span>
+              <span class="hero__title-line text-gradient" data-i18n="hero.title2"
+                >Sistemas que se sienten vivos.</span
+              >
+            </h1>
+
+            <p class="hero__role">
+              <span data-i18n="hero.greeting">Hola, soy Jorge Campo</span>
+              <span class="hero__role-sep" aria-hidden="true">·</span>
+              <span data-i18n="hero.role">Full Stack Developer &amp; Pentester</span>
+            </p>
+
+            <p class="hero__desc" data-i18n="hero.description">
+              Diseño y construyo aplicaciones web de principio a fin, y luego las miro con ojos de
+              atacante. Ahora también creo herramientas de observabilidad para IA local como Monitor
+              IA.
+            </p>
+
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#proyectos">
+                <span data-i18n="hero.ctaProjects">Ver proyectos</span>
+                <i class="bx bx-right-arrow-alt" aria-hidden="true"></i>
+              </a>
+              <a class="btn btn--ghost" href="#contacto">
+                <span data-i18n="hero.ctaContact">Hablemos</span>
+              </a>
+            </div>
+
+            <div class="hero__meta">
+              <div
+                class="hero__social"
+                role="group"
+                aria-label="Perfiles y contacto"
+                data-i18n-aria="hero.socialAria"
+              >
+                <a
+                  class="icon-link"
+                  href="https://github.com/Yorch82"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
+                  <i class="bx bxl-github" aria-hidden="true"></i>
+                </a>
+                <a
+                  class="icon-link"
+                  href="https://www.linkedin.com/in/yorch82/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <i class="bx bxl-linkedin" aria-hidden="true"></i>
+                </a>
+                <a
+                  class="icon-link"
+                  href="https://yorch82.github.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Blog"
+                >
+                  <i class="bx bx-book-content" aria-hidden="true"></i>
+                </a>
+                <a class="icon-link" href="mailto:jcampo82@proton.me" aria-label="Email">
+                  <i class="bx bx-envelope" aria-hidden="true"></i>
+                </a>
+              </div>
+
+              <a class="hero__scroll" href="#sobre-mi">
+                <span data-i18n="hero.scroll">Desliza para explorar</span>
+                <span class="hero__scroll-line" aria-hidden="true"></span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero__visual reveal" style="--delay: 0.12s">
+            <div class="portrait">
+              <div class="portrait__frame">
+                <img
+                  class="portrait__img"
+                  src="./img/yo.png"
+                  alt="Retrato de Jorge Campo"
+                  data-i18n-alt="hero.portraitAlt"
+                  width="600"
+                  height="600"
+                  fetchpriority="high"
+                />
+              </div>
+
+              <a
+                class="float-card float-card--now"
+                href="#monitor-ia"
+                aria-label="Ver el proyecto Monitor IA"
+                data-i18n-aria="hero.monitorLink"
+              >
+                <img src="./img/monitor-ia.png" alt="" width="32" height="32" />
+                <span class="float-card__text">
+                  <span data-i18n="hero.nowLabel">Construyendo ahora</span>
+                  <strong>Monitor IA</strong>
+                </span>
+                <span class="live-dot" aria-hidden="true"></span>
+              </a>
+
+              <div class="float-card float-card--certs">
+                <span class="float-card__badges">
+                  <img src="./img/ejpt.png" alt="eJPT" width="34" height="30" />
+                  <img src="./img/ecppt.png" alt="eCPPT" width="34" height="30" />
+                </span>
+                <span class="float-card__text">
+                  <span data-i18n="hero.certsLabel">Certificado</span>
+                  <strong>eJPT + eCPPT</strong>
+                </span>
+              </div>
+
+              <div class="float-card float-card--terminal" aria-hidden="true">
+                <span><span class="terminal__prompt">$</span> whoami</span>
+                <span class="terminal__out">jorge_campo</span>
+                <span><span class="terminal__prompt">$</span> focus</span>
+                <span class="terminal__out terminal__out--accent">fullstack + security</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <dl class="stats reveal" style="--delay: 0.18s">
+            <div class="stat">
+              <dt class="stat__label" data-i18n="stats.projects">Proyectos personales</dt>
+              <dd class="stat__value">07</dd>
+            </div>
+            <div class="stat">
+              <dt class="stat__label" data-i18n="stats.certs">Certificaciones ofensivas</dt>
+              <dd class="stat__value">02</dd>
+            </div>
+            <div class="stat">
+              <dt class="stat__label" data-i18n="stats.areas">Áreas de especialidad</dt>
+              <dd class="stat__value">03</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- Marquee -->
+      <section class="marquee" aria-label="Tecnologías" data-i18n-aria="marquee.aria">
+        <div class="marquee__track">
+          <div class="marquee__group">
+            <span class="marquee__item"><i class="devicon-javascript-plain" aria-hidden="true"></i>JavaScript</span>
+            <span class="marquee__item"><i class="devicon-python-plain" aria-hidden="true"></i>Python</span>
+            <span class="marquee__item"><i class="devicon-react-original" aria-hidden="true"></i>React</span>
+            <span class="marquee__item"><i class="devicon-nodejs-plain" aria-hidden="true"></i>Node.js</span>
+            <span class="marquee__item"><i class="devicon-fastapi-plain" aria-hidden="true"></i>FastAPI</span>
+            <span class="marquee__item"><i class="devicon-mongodb-plain" aria-hidden="true"></i>MongoDB</span>
+            <span class="marquee__item"><i class="devicon-mysql-plain" aria-hidden="true"></i>MySQL</span>
+            <span class="marquee__item"><i class="devicon-sqlite-plain" aria-hidden="true"></i>SQLite</span>
+            <span class="marquee__item"><i class="devicon-docker-plain" aria-hidden="true"></i>Docker</span>
+            <span class="marquee__item"><i class="devicon-tailwindcss-plain" aria-hidden="true"></i>Tailwind</span>
+            <span class="marquee__item"><i class="devicon-git-plain" aria-hidden="true"></i>Git</span>
+            <span class="marquee__item"><i class="devicon-debian-plain" aria-hidden="true"></i>Debian</span>
+            <span class="marquee__item"><i class="bx bxl-tux" aria-hidden="true"></i>Linux</span>
+            <span class="marquee__item"><i class="devicon-swift-plain" aria-hidden="true"></i>Swift</span>
+          </div>
+          <div class="marquee__group" aria-hidden="true">
+            <span class="marquee__item"><i class="devicon-javascript-plain"></i>JavaScript</span>
+            <span class="marquee__item"><i class="devicon-python-plain"></i>Python</span>
+            <span class="marquee__item"><i class="devicon-react-original"></i>React</span>
+            <span class="marquee__item"><i class="devicon-nodejs-plain"></i>Node.js</span>
+            <span class="marquee__item"><i class="devicon-fastapi-plain"></i>FastAPI</span>
+            <span class="marquee__item"><i class="devicon-mongodb-plain"></i>MongoDB</span>
+            <span class="marquee__item"><i class="devicon-mysql-plain"></i>MySQL</span>
+            <span class="marquee__item"><i class="devicon-sqlite-plain"></i>SQLite</span>
+            <span class="marquee__item"><i class="devicon-docker-plain"></i>Docker</span>
+            <span class="marquee__item"><i class="devicon-tailwindcss-plain"></i>Tailwind</span>
+            <span class="marquee__item"><i class="devicon-git-plain"></i>Git</span>
+            <span class="marquee__item"><i class="devicon-debian-plain"></i>Debian</span>
+            <span class="marquee__item"><i class="bx bxl-tux"></i>Linux</span>
+            <span class="marquee__item"><i class="devicon-swift-plain"></i>Swift</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="section" id="sobre-mi" data-nav-target="sobre-mi" aria-labelledby="about-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow" data-i18n="about.eyebrow">01 — Sobre mí</p>
+            <h2 class="section-title" id="about-title" data-i18n="about.title">
+              Perfil híbrido: producto, código y seguridad.
+            </h2>
+          </div>
+
+          <div class="about-grid">
+            <article class="bento bento--bio reveal">
+              <p class="bento__lead" data-i18n="about.lead">
+                Soy Jorge Campo, desarrollador Full Stack y pentester. Me muevo con la misma
+                comodidad en React y Node que en una shell de Linux, buscando siempre el equilibrio
+                entre experiencia de usuario, rendimiento y superficie de ataque.
+              </p>
+              <p class="bento__body" data-i18n="about.body">
+                Mi enfoque es simple: entender el problema, diseñar una solución mantenible y
+                probarla como si fuera un atacante. Eso me permite construir productos que no solo
+                funcionan, sino que aguantan.
+              </p>
+              <p class="bento__meta">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span data-i18n="about.location">España · Trabajo en remoto</span>
+              </p>
+            </article>
+
+            <article class="bento bento--focus reveal" style="--delay: 0.08s">
+              <h3 class="bento__title" data-i18n="about.focusTitle">Qué aporto</h3>
+              <ul class="focus-list">
+                <li class="focus-item">
+                  <span class="focus-item__icon" aria-hidden="true"><i class="bx bx-code-alt"></i></span>
+                  <span>
+                    <strong data-i18n="about.focus1Title">Full Stack</strong>
+                    <span data-i18n="about.focus1Desc"
+                      >Interfaces con React, APIs con Node y FastAPI, y datos en MongoDB, MySQL o
+                      SQLite.</span
+                    >
+                  </span>
+                </li>
+                <li class="focus-item">
+                  <span class="focus-item__icon" aria-hidden="true"><i class="bx bx-shield-quarter"></i></span>
+                  <span>
+                    <strong data-i18n="about.focus2Title">Seguridad ofensiva</strong>
+                    <span data-i18n="about.focus2Desc"
+                      >Pentesting web, escalada de privilegios y entornos Active Directory. eJPT y
+                      eCPPT.</span
+                    >
+                  </span>
+                </li>
+                <li class="focus-item">
+                  <span class="focus-item__icon" aria-hidden="true"><i class="bx bx-pulse"></i></span>
+                  <span>
+                    <strong data-i18n="about.focus3Title">IA &amp; observabilidad</strong>
+                    <span data-i18n="about.focus3Desc"
+                      >Telemetría en tiempo real, métricas de GPU, tokens y coste energético para
+                      modelos locales.</span
+                    >
+                  </span>
+                </li>
+              </ul>
+            </article>
+
+            <article class="bento bento--stack reveal" style="--delay: 0.12s">
+              <div class="bento__stack-head">
+                <div>
+                  <h3 class="bento__title" data-i18n="about.stackTitle">Stack habitual</h3>
+                  <p class="bento__body" data-i18n="about.stackDesc">
+                    Herramientas que uso para llevar una idea desde el primer commit hasta
+                    producción.
+                  </p>
+                </div>
+                <span class="bento__stack-icon" aria-hidden="true"><i class="bx bx-layer"></i></span>
+              </div>
+              <ul class="chips">
+                <li class="chip"><i class="devicon-react-original" aria-hidden="true"></i>React</li>
+                <li class="chip"><i class="devicon-javascript-plain" aria-hidden="true"></i>JavaScript</li>
+                <li class="chip"><i class="devicon-typescript-plain" aria-hidden="true"></i>TypeScript</li>
+                <li class="chip"><i class="devicon-nodejs-plain" aria-hidden="true"></i>Node.js</li>
+                <li class="chip"><i class="devicon-express-original" aria-hidden="true"></i>Express</li>
+                <li class="chip"><i class="devicon-python-plain" aria-hidden="true"></i>Python</li>
+                <li class="chip"><i class="devicon-fastapi-plain" aria-hidden="true"></i>FastAPI</li>
+                <li class="chip"><i class="devicon-mongodb-plain" aria-hidden="true"></i>MongoDB</li>
+                <li class="chip"><i class="devicon-mysql-plain" aria-hidden="true"></i>MySQL</li>
+                <li class="chip"><i class="devicon-docker-plain" aria-hidden="true"></i>Docker</li>
+                <li class="chip"><i class="bx bxl-tux" aria-hidden="true"></i>Linux</li>
+                <li class="chip"><i class="devicon-git-plain" aria-hidden="true"></i>Git</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured project -->
+      <section class="section section--featured" id="monitor-ia" data-nav-target="proyectos" aria-labelledby="featured-heading">
+        <div class="container">
+          <div class="section-head section-head--split reveal">
+            <div>
+              <p class="eyebrow" data-i18n="featured.eyebrow">02 — Proyecto destacado</p>
+              <h2 class="section-title" id="featured-heading" data-i18n="featured.heading">
+                IA local, bajo control.
+              </h2>
+            </div>
+            <p class="section-desc" data-i18n="featured.headingDesc">
+              Un proyecto nacido de una necesidad real: entender qué ocurre dentro de mi servidor
+              cuando un modelo está generando.
+            </p>
+          </div>
+
+          <article class="feature reveal">
+            <div class="feature__content">
+              <div class="feature__brand">
+                <img
+                  class="feature__logo"
+                  src="./img/monitor-ia.png"
+                  alt="Logotipo de Monitor IA"
+                  data-i18n-alt="featured.logoAlt"
+                  width="72"
+                  height="72"
+                  loading="lazy"
+                />
+                <span class="badge" data-i18n="featured.badge">IA · Observabilidad</span>
+              </div>
+
+              <h3 class="feature__title">Monitor IA</h3>
+              <p class="feature__subtitle" data-i18n="featured.subtitle">
+                El panel que convierte la inferencia local en datos accionables.
+              </p>
+              <p class="feature__desc" data-i18n="featured.description">
+                Monitor IA es un dashboard en tiempo real para modelos que corren en tu propio
+                servidor. Mide tokens, ocupación de contexto, GPU/VRAM, temperatura, potencia y
+                coste energético, y añade seguridad y refrigeración del servidor. Backend FastAPI
+                con WebSocket, frontend React y app nativa SwiftUI.
+              </p>
+
+              <ul class="feature__list">
+                <li><i class="bx bx-check" aria-hidden="true"></i><span data-i18n="featured.bullet1">Streaming en vivo por WebSocket con histórico en SQLite y exportación CSV.</span></li>
+                <li><i class="bx bx-check" aria-hidden="true"></i><span data-i18n="featured.bullet2">Proxy OpenAI-compatible que captura tokens, contexto y coste por petición.</span></li>
+                <li><i class="bx bx-check" aria-hidden="true"></i><span data-i18n="featured.bullet3">Seguridad del servidor: SSH, firewall, escaneos web y geolocalización.</span></li>
+                <li><i class="bx bx-check" aria-hidden="true"></i><span data-i18n="featured.bullet4">Refrigeración con perfiles de ventilación y app iOS con Swift Charts.</span></li>
+              </ul>
+
+              <dl class="feature__metrics">
+                <div><dd>1 s</dd><dt data-i18n="featured.metric1">Refresco en vivo</dt></div>
+                <div><dd>52</dd><dt data-i18n="featured.metric2">Tests automáticos</dt></div>
+                <div><dd>3</dd><dt data-i18n="featured.metric3">Proveedores de GPU</dt></div>
+                <div><dd>iOS</dd><dt data-i18n="featured.metric4">App nativa</dt></div>
+              </dl>
+
+              <div class="feature__stack">
+                <span class="feature__stack-label" data-i18n="featured.stackLabel">Stack</span>
+                <ul class="tags">
+                  <li>Python</li>
+                  <li>FastAPI</li>
+                  <li>React</li>
+                  <li>Tailwind</li>
+                  <li>SQLite</li>
+                  <li>Docker</li>
+                  <li>SwiftUI</li>
+                </ul>
+              </div>
+
+              <div class="feature__actions">
+                <a
+                  class="btn btn--primary"
+                  href="https://github.com/Yorch82/monitor-ia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="bx bxl-github" aria-hidden="true"></i>
+                  <span data-i18n="featured.viewCode">Ver repositorio</span>
+                </a>
+                <a
+                  class="btn btn--ghost"
+                  href="https://github.com/Yorch82/monitor-ia#readme"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span data-i18n="featured.readDocs">Documentación</span>
+                  <i class="bx bx-link-external" aria-hidden="true"></i>
+                </a>
+              </div>
+              <p class="feature__note">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span data-i18n="featured.note">Proyecto self-hosted · Demo no pública</span>
+              </p>
+            </div>
+
+            <div class="feature__visual">
+              <div class="dash" aria-hidden="true">
+                <div class="dash__bar">
+                  <span class="dash__dots"><i></i><i></i><i></i></span>
+                  <span class="dash__name">
+                    <img src="./img/monitor-ia.png" alt="" width="18" height="18" />
+                    monitor-ia
+                  </span>
+                  <span class="dash__live"><i></i>LIVE</span>
+                </div>
+
+                <div class="dash__body">
+                  <div class="dash__kpis">
+                    <div class="dash__kpi">
+                      <span class="dash__label">TOKENS/S</span>
+                      <strong class="dash__value">42.8</strong>
+                      <span class="dash__delta">+12.4%</span>
+                    </div>
+                    <div class="dash__kpi">
+                      <span class="dash__label">CONTEXT</span>
+                      <strong class="dash__value">68<span>%</span></strong>
+                      <span class="dash__meter"><i style="width: 68%"></i></span>
+                    </div>
+                    <div class="dash__kpi">
+                      <span class="dash__label">GPU 0</span>
+                      <strong class="dash__value">74<span>%</span></strong>
+                      <span class="dash__meter dash__meter--violet"><i style="width: 74%"></i></span>
+                    </div>
+                    <div class="dash__kpi">
+                      <span class="dash__label">COST</span>
+                      <strong class="dash__value">0.18<span> €/h</span></strong>
+                      <span class="dash__delta dash__delta--muted">session 1.42 €</span>
+                    </div>
+                  </div>
+
+                  <div class="dash__chart">
+                    <div class="dash__chart-head">
+                      <span>Tokens per second</span>
+                      <span class="dash__range">1H</span>
+                    </div>
+                    <svg viewBox="0 0 360 110" preserveAspectRatio="none" role="presentation">
+                      <defs>
+                        <linearGradient id="sparkFill" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="0%" stop-color="#6ef2c4" stop-opacity=".32" />
+                          <stop offset="100%" stop-color="#6ef2c4" stop-opacity="0" />
+                        </linearGradient>
+                        <linearGradient id="sparkLine" x1="0" y1="0" x2="1" y2="0">
+                          <stop offset="0%" stop-color="#5aa9ff" />
+                          <stop offset="55%" stop-color="#6ef2c4" />
+                          <stop offset="100%" stop-color="#c9ff6e" />
+                        </linearGradient>
+                      </defs>
+                      <path
+                        class="dash__area"
+                        d="M0 84 C 18 80, 26 62, 42 66 S 68 94, 86 72 S 116 32, 136 50 S 158 84, 180 66 S 208 28, 230 42 S 256 74, 278 54 S 306 22, 328 36 S 348 50, 360 30 L 360 110 L 0 110 Z"
+                        fill="url(#sparkFill)"
+                      />
+                      <path
+                        class="dash__line"
+                        d="M0 84 C 18 80, 26 62, 42 66 S 68 94, 86 72 S 116 32, 136 50 S 158 84, 180 66 S 208 28, 230 42 S 256 74, 278 54 S 306 22, 328 36 S 348 50, 360 30"
+                        fill="none"
+                        stroke="url(#sparkLine)"
+                        stroke-width="2.2"
+                        stroke-linecap="round"
+                      />
+                      <circle cx="360" cy="30" r="4" fill="#c9ff6e" />
+                    </svg>
+                  </div>
+
+                  <div class="dash__bottom">
+                    <div class="dash__gauge">
+                      <span class="dash__ring" style="--v: 68"><b>68%</b></span>
+                      <small>Context</small>
+                    </div>
+                    <div class="dash__gauge">
+                      <span class="dash__ring dash__ring--violet" style="--v: 74"><b>74%</b></span>
+                      <small>GPU</small>
+                    </div>
+                    <div class="dash__power">
+                      <span class="dash__label">POWER</span>
+                      <strong>218 W</strong>
+                      <span class="dash__bars">
+                        <i style="height: 38%"></i><i style="height: 56%"></i><i style="height: 47%"></i>
+                        <i style="height: 72%"></i><i style="height: 61%"></i><i style="height: 84%"></i>
+                        <i style="height: 69%"></i><i style="height: 92%"></i><i style="height: 78%"></i>
+                        <i style="height: 100%"></i><i style="height: 86%"></i><i style="height: 94%"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dash-toast" aria-hidden="true">
+                <i class="bx bx-check-shield"></i>
+                <span>
+                  <strong>All systems nominal</strong>
+                  <span>52 tests · WebSocket 1 s</span>
+                </span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="section" id="proyectos" data-nav-target="proyectos" aria-labelledby="projects-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow" data-i18n="projects.eyebrow">03 — Proyectos</p>
+            <h2 class="section-title" id="projects-title" data-i18n="projects.title">
+              Otros proyectos que he construido.
+            </h2>
+            <p class="section-desc" data-i18n="projects.description">
+              Aplicaciones full stack, APIs y herramientas de seguridad. Cada una resuelve un
+              problema distinto y comparte la misma obsesión por el detalle.
+            </p>
+          </div>
+
+          <div
+            class="filters reveal"
+            role="group"
+            aria-label="Filtrar proyectos"
+            data-i18n-aria="projects.filterAria"
+          >
+            <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">
+              <span data-i18n="projects.filterAll">Todos</span>
+            </button>
+            <button type="button" class="filter" data-filter="web" aria-pressed="false">
+              <span data-i18n="projects.filterWeb">Web</span>
+            </button>
+            <button type="button" class="filter" data-filter="backend" aria-pressed="false">
+              <span data-i18n="projects.filterBackend">Backend</span>
+            </button>
+            <button type="button" class="filter" data-filter="security" aria-pressed="false">
+              <span data-i18n="projects.filterSecurity">Seguridad</span>
+            </button>
+          </div>
+
+          <div class="projects-grid reveal" id="projects-grid">
+            <article class="project-card" data-category="web" style="--card-accent: #61dafb">
+              <div class="project-card__top">
+                <span class="project-card__index">01</span>
+                <span class="project-card__icon" aria-hidden="true"><i class="devicon-react-original"></i></span>
+              </div>
+              <h3 data-i18n="projects.memeTitle">MemeStack</h3>
+              <p data-i18n="projects.memeDesc">
+                Red social de memes para desarrolladores: registro, login, publicaciones y likes.
+                Interfaces con React y Redux sobre una API propia.
+              </p>
+              <ul class="tags">
+                <li>React</li>
+                <li>Redux</li>
+                <li>Node</li>
+              </ul>
+              <div class="project-card__links">
+                <a
+                  class="text-link"
+                  href="https://memestack.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span data-i18n="projects.live">Ver demo</span>
+                  <i class="bx bx-right-arrow-alt" aria-hidden="true"></i>
+                </a>
+                <a
+                  class="icon-link"
+                  href="https://github.com/Yorch82/SocialFrontend"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="MemeStack en GitHub"
+                >
+                  <i class="bx bxl-github" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="backend" style="--card-accent: #7cc36b">
+              <div class="project-card__top">
+                <span class="project-card__index">02</span>
+                <span class="project-card__icon" aria-hidden="true"><i class="devicon-nodejs-plain"></i></span>
+              </div>
+              <h3 data-i18n="projects.memeApiTitle">MemeStack API</h3>
+              <p data-i18n="projects.memeApiDesc">
+                API REST para la red social, documentada con Swagger. Autenticación, publicaciones,
+                comentarios y me gusta con Node, Express y MongoDB.
+              </p>
+              <ul class="tags">
+                <li>Node</li>
+                <li>Express</li>
+                <li>MongoDB</li>
+              </ul>
+              <div class="project-card__links">
+                <a
+                  class="text-link"
+                  href="https://memestack-backend.adaptable.app/api-docs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span data-i18n="projects.viewApi">Ver API</span>
+                  <i class="bx bx-right-arrow-alt" aria-hidden="true"></i>
+                </a>
+                <a
+                  class="icon-link"
+                  href="https://github.com/Yorch82/SocialBackend"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="MemeStack API en GitHub"
+                >
+                  <i class="bx bxl-github" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="web" style="--card-accent: #a78bfa">
+              <div class="project-card__top">
+                <span class="project-card__index">03</span>
+                <span class="project-card__icon" aria-hidden="true"><i class="devicon-react-original"></i></span>
+              </div>
+              <h3 data-i18n="projects.shopTitle">Tech Shop</h3>
+              <p data-i18n="projects.shopDesc">
+                E-commerce completo con catálogo, autenticación, carrito y pedidos. Frontend
+                React/Redux conectado a una API de tienda.
+              </p>
+              <ul class="tags">
+                <li>React</li>
+                <li>Redux</li>
+                <li>Stripe</li>
+              </ul>
+              <div class="project-card__links">
+                <a
+                  class="text-link"
+                  href="https://github.com/Yorch82/ShopFrontend"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span data-i18n="projects.code">Código</span>
+                  <i class="bx bx-right-arrow-alt" aria-hidden="true"></i>
+                </a>
+                <a
+                  class="icon-link"
+                  href="https://github.com/Yorch82/ShopFrontend"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Tech Shop en GitHub"
+                >
+                  <i class="bx bxl-github" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="backend" style="--card-accent: #f5c542">
+              <div class="project-card__top">
+                <span class="project-card__index">04</span>
+                <span class="project-card__icon" aria-hidden="true"><i class="devicon-express-original"></i></span>
+              </div>
+              <h3 data-i18n="projects.shopApiTitle">Tech Shop API</h3>
+              <p data-i18n="projects.shopApiDesc">
+                API REST para e-commerce con productos, usuarios, pedidos y pago con Stripe. Node,
+                Express y Sequelize.
+              </p>
+              <ul class="tags">
+                <li>Node</li>
+                <li>Sequelize</li>
+                <li>Stripe</li>
+              </ul>
+              <div class="project-card__links">
+                <a
+                  class="text-link"
+                  href="https://shopbackend-dev-rkxj.1.ie-1.fl0.io/api-docs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span data-i18n="projects.viewApi">Ver API</span>
+                  <i class="bx bx-right-arrow-alt" aria-hidden="true"></i>
+                </a>
+                <a
+                  class="icon-link"
+                  href="https://github.com/Yorch82/ShopBackend"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Tech Shop API en GitHub"
+                >
+                  <i class="bx bxl-github" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="web" style="--card-accent: #f7df1e">
+              <div class="project-card__top">
+                <span class="project-card__index">05</span>
+                <span class="project-card__icon" aria-hidden="true"><i class="devicon-javascript-plain"></i></span>
+              </div>
+              <h3 data-i18n="projects.triviaTitle">Trivia Quiz</h3>
+              <p data-i18n="projects.triviaDesc">
+                SPA de 10 preguntas que consume una API externa, con feedback inmediato de aciertos
+                y errores. JavaScript puro.
+              </p>
+              <ul class="tags">
+                <li>JavaScript</li>
+                <li>SPA</li>
+                <li>API</li>
+              </ul>
+              <div class="project-card__links">
+                <a
+                  class="text-link"
+                  href="https://spa-trivial.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span data-i18n="projects.live">Ver demo</span>
+                  <i class="bx bx-right-arrow-alt" aria-hidden="true"></i>
+                </a>
+                <a
+                  class="icon-link"
+                  href="https://github.com/Yorch82/Proyecto-SPA--Quizz-"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Trivia Quiz en GitHub"
+                >
+                  <i class="bx bxl-github" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="security" style="--card-accent: #ff7a7a">
+              <div class="project-card__top">
+                <span class="project-card__index">06</span>
+                <span class="project-card__icon" aria-hidden="true"><i class="bx bx-shield-quarter"></i></span>
+              </div>
+              <h3 data-i18n="projects.blogTitle">Ethical Hacking Blog</h3>
+              <p data-i18n="projects.blogDesc">
+                Blog personal con writeups de HackTheBox y VulnHub, noticias y técnicas de
+                pentesting y ciberseguridad.
+              </p>
+              <ul class="tags">
+                <li>Pentesting</li>
+                <li>CTF</li>
+                <li>Writeups</li>
+              </ul>
+              <div class="project-card__links">
+                <a
+                  class="text-link"
+                  href="https://yorch82.github.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span data-i18n="projects.visit">Visitar blog</span>
+                  <i class="bx bx-right-arrow-alt" aria-hidden="true"></i>
+                </a>
+                <span class="project-card__badge">BLOG</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section class="section" id="certificaciones" data-nav-target="certificaciones" aria-labelledby="certs-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow" data-i18n="certs.eyebrow">04 — Certificaciones</p>
+            <h2 class="section-title" id="certs-title" data-i18n="certs.title">
+              Aprendizaje validado, no solo prometido.
+            </h2>
+            <p class="section-desc" data-i18n="certs.description">
+              Certificaciones prácticas de eLearnSecurity que respaldan el trabajo ofensivo.
+            </p>
+          </div>
+
+          <div class="certs-grid">
+            <article class="cert-card reveal">
+              <div class="cert-card__badge">
+                <img
+                  src="./img/ejpt.png"
+                  alt="Insignia eJPT"
+                  data-i18n-alt="certs.ejptAlt"
+                  width="100"
+                  height="88"
+                  loading="lazy"
+                />
+              </div>
+              <div class="cert-card__body">
+                <span class="cert-card__issuer">eLearnSecurity</span>
+                <h3 data-i18n="certs.ejptFull">eLearnSecurity Junior Penetration Tester</h3>
+                <p data-i18n="certs.ejptDesc">
+                  Fundamentos de pentesting: reconocimiento, explotación web, escalada y pivotaje
+                  básico.
+                </p>
+                <a
+                  class="text-link"
+                  href="https://verified.elearnsecurity.com/certificates/828833e2-7d29-427c-9b3a-07172b430cd2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span data-i18n="certs.verify">Verificar certificado</span>
+                  <i class="bx bx-link-external" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+
+            <article class="cert-card reveal" style="--delay: 0.08s">
+              <div class="cert-card__badge">
+                <img
+                  src="./img/ecppt.png"
+                  alt="Insignia eCPPT"
+                  data-i18n-alt="certs.ecpptAlt"
+                  width="100"
+                  height="88"
+                  loading="lazy"
+                />
+              </div>
+              <div class="cert-card__body">
+                <span class="cert-card__issuer">eLearnSecurity</span>
+                <h3 data-i18n="certs.ecpptFull">
+                  eLearnSecurity Certified Professional Penetration Tester
+                </h3>
+                <p data-i18n="certs.ecpptDesc">
+                  Pentesting profesional: explotación avanzada, Active Directory, post-explotación e
+                  informes.
+                </p>
+                <a
+                  class="text-link"
+                  href="https://verified.elearnsecurity.com/certificates/12832473-1e61-4505-bf66-ad5a59696629"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span data-i18n="certs.verify">Verificar certificado</span>
+                  <i class="bx bx-link-external" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section section--contact" id="contacto" data-nav-target="contacto" aria-labelledby="contact-title">
+        <div class="container">
+          <div class="contact-panel reveal">
+            <p class="eyebrow contact__eyebrow" data-i18n="contact.eyebrow">05 — Contacto</p>
+            <h2 class="contact__title" id="contact-title" data-i18n="contact.title">
+              ¿Construimos algo que aguante?
+            </h2>
+            <p class="contact__desc" data-i18n="contact.description">
+              Tengo espacio para nuevos proyectos full stack, auditorías de seguridad y
+              colaboraciones alrededor de la IA local. Cuéntame qué tienes en mente.
+            </p>
+
+            <a class="contact__email" href="mailto:jcampo82@proton.me">jcampo82@proton.me</a>
+
+            <div class="contact__actions">
+              <a class="btn btn--primary" href="mailto:jcampo82@proton.me">
+                <i class="bx bx-envelope" aria-hidden="true"></i>
+                <span data-i18n="contact.primary">Enviar un correo</span>
+              </a>
+              <button type="button" class="btn btn--ghost" id="copy-email">
+                <i class="bx bx-copy" aria-hidden="true"></i>
+                <span data-i18n="contact.copy">Copiar email</span>
+              </button>
+              <a
+                class="btn btn--ghost"
+                href="https://github.com/Yorch82"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="bx bxl-github" aria-hidden="true"></i>
+                <span data-i18n="contact.secondary">Ver GitHub</span>
+              </a>
+            </div>
+
+            <div class="contact__social">
+              <span data-i18n="contact.follow">O encuéntrame en</span>
+              <div class="contact__social-links">
+                <a
+                  class="icon-link"
+                  href="https://www.linkedin.com/in/yorch82/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <i class="bx bxl-linkedin" aria-hidden="true"></i>
+                </a>
+                <a
+                  class="icon-link"
+                  href="https://github.com/Yorch82"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
+                  <i class="bx bxl-github" aria-hidden="true"></i>
+                </a>
+                <a
+                  class="icon-link"
+                  href="https://yorch82.github.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Blog"
+                >
+                  <i class="bx bx-book-content" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <script src="./js/index.js"></script>
+
+    <footer class="site-footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <span class="brand__mark brand__mark--sm" aria-hidden="true">JC</span>
+          <span>Jorge Campo<span class="brand__dot">.</span></span>
+        </div>
+        <p class="footer__copy">
+          © <span id="year">2026</span> Jorge Campo ·
+          <span data-i18n="footer.tagline">Diseñado y construido con cuidado.</span>
+        </p>
+        <a class="footer__top" href="#inicio">
+          <span data-i18n="footer.top">Volver arriba</span>
+          <i class="bx bx-up-arrow-alt" aria-hidden="true"></i>
+        </a>
+      </div>
+    </footer>
+
+    <script src="./js/index.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jorge Campo",
+        "jobTitle": "Full Stack Developer & Pentester",
+        "email": "mailto:jcampo82@proton.me",
+        "sameAs": [
+          "https://github.com/Yorch82",
+          "https://www.linkedin.com/in/yorch82/",
+          "https://yorch82.github.io/"
+        ],
+        "knowsAbout": [
+          "Full Stack Development",
+          "Cybersecurity",
+          "Penetration Testing",
+          "Artificial Intelligence",
+          "Observability"
+        ]
+      }
+    </script>
   </body>
 </html>
